@@ -394,7 +394,7 @@ Class | Method | HTTP request
 - **Type**: OAuth
 - **Flow**: accessCode
 - **Authorization URL**: `https://connect.squareup.com/oauth2/authorize`
-- **Scopes**: 
+- **Scopes**:
  - **MERCHANT_PROFILE_READ**: GET endpoints related to a merchant's business and location entities. Almost all Connect API applications need this permission in order to obtain a merchant's location IDs
  - **PAYMENTS_READ**: GET endpoints related to transactions and refunds
  - **PAYMENTS_WRITE**: POST, PUT, and DELETE endpoints related to transactions and refunds. E-commerce applications must request this permission
@@ -461,6 +461,8 @@ API endpoints.
 ### Example
 
 ```python
+from __future__ import print_function
+
 import squareconnect
 from squareconnect.rest import ApiException
 
