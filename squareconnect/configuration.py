@@ -100,6 +100,9 @@ class Configuration(object):
         # client key file
         self.key_file = None
 
+        # Proxy settings
+        self.proxy_url = None
+
     @property
     def logger_file(self):
         """

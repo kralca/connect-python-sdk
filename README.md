@@ -453,6 +453,31 @@ except ApiException as e:
     print ('Exception when calling V1EmployeesApi->list_employee_roles: %s\n' % e)
 ```
 
+## Using a proxy
+
+You may optionally specify a proxy to be used when connecting to the
+API endpoints.
+
+### Example
+
+```python
+import squareconnect
+from squareconnect.rest import ApiException
+
+squareconnect.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+squareconnect.configuration.proxy_url = 'http://localhost:3128/'
+
+api = squareconnect.apis.V1LocationsApi()
+
+try:
+    locations = api.list_locations()
+    print('There are {} locations registered in Square.'.format(len(locations)))
+    for location in locations:
+      print('id: {}, name:{}'.format(location.id, location.name))
+except ApiException as e:
+    print ('Exception when calling V1LocationsApi->list_locations: %s\n' % e)
+```  
+
 ## Contributing
 
 Send bug reports, feature requests, and code contributions to the [API
